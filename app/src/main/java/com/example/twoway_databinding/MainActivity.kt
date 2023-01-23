@@ -15,7 +15,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+        // Assigning viewmodel variable with actual viewmodel
         binding.viewModel = viewModel
+        // definidng lifecycleowner as this
         binding.lifecycleOwner = this
     }
 }
